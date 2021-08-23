@@ -1,0 +1,68 @@
+h3,
+h4,
+h5 {
+	font-family: $font-fam;
+	font-weight: 400;
+}
+
+.h2 {
+	font-size: 1.3rem;
+	display: inline-block;
+	padding: 0.4rem 1.4rem;
+	border-radius: 2rem;
+	letter-spacing: 0.075em;
+
+	@include device(tab-land) {
+		font-size: 1.1rem;
+	}
+
+	&--blue {
+		color: $blue;
+		background-color: $grey-light-1;
+	}
+
+	&--white {
+		color: $white;
+		background-color: rgba($white, 0.2);
+	}
+}
+
+.h3 {
+	color: $black;
+	font-size: 4rem;
+
+	@include device(tab-land) {
+		font-size: 3rem;
+	}
+
+	@include device(phone) {
+		font-size: 2rem;
+	}
+
+	&--white {
+		color: $white;
+	}
+
+	&--blue {
+		color: $blue;
+	}
+}
+
+.h4 {
+	color: $black;
+	font-size: 2.5rem;
+
+	@include device(tab-land) {
+		font-size: 2rem;
+	}
+}
+
+.h5 {
+	font-size: 1.8rem;
+	color: $grey-dark-2;
+	font-weight: 400;
+
+	@include device(tab-port) {
+		font-size: 1.4rem;
+	}
+}

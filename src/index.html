@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Marta Bires">
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
+    <!-- <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon"> -->
+
+    <!-- Material Design Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800%7CMuli:100,300,400,600,800">
+
+    <!-- AOS Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- My css -->
+    <link rel="stylesheet" href="sass/main.scss">
+    <title>Businet</title>
+</head>
+<body id="body">
+
+    <!-- ===================== MENU ===================== -->
+    <div class="menu" id="menu" data-aos="zoom-in-up" data-aos-anchor-placement="top-bottom">
+
+        <div class="md-hamburger">
+            <input type="checkbox" class="md-hamburger__chb " id="menu-toggle"/>
+
+            <label for="menu-toggle" class="md-hamburger__chb-btn">
+                <span class="md-hamburger__icon">&nbsp;</span>
+            </label>
+
+            <ul class="md-hamburger__list">
+                <li class="md-hamburger__links active"><a href="#" class="md-hamburger__link">Home</a></li>
+                <li class="md-hamburger__links"><a href="#" class="md-hamburger__link">About Us</a></li>
+                <li class="md-hamburger__links"><a href="#" class="md-hamburger__link">Our Team</a></li>
+                <li class="md-hamburger__links"><a href="#" class="md-hamburger__link">Pricing</a></li>
+                <li class="md-hamburger__links"><a href="#" class="md-hamburger__link expand">Pages <i class="material-icons">expand_more</i> </a></li>
+                <li class="md-hamburger__links"><a href="#" class="md-hamburger__link">Contact Us</a></li>
+            </ul>
+        </div>
+
+
+        <a href="index.html" class="menu__logo"><img src="./img/logo-inverse-148x34.png"  alt=""/></a>
+
+        <ul class="menu__list">
+            <li class="menu__links active"><a href="/" class="menu__link">Home</a></li>
+            <li class="menu__links"><a href="#about" class="menu__link">About Us</a></li>
+            <li class="menu__links"><a href="#team" class="menu__link">Our Team</a></li>
+            <li class="menu__links"><a href="#" class="menu__link">Pricing</a></li>
+
+            <li class="menu__links menu__pages-hover"><a href="#" class="menu__link">Pages &nbsp;<i class="material-icons menu__pages-entitie">expand_more</i></a></li>
+
+            <li class="menu__links"><a href="#contact" class="menu__link">Contact Us</a></li>
+
+            <nav class="menu__pages-on">
+                <ul>
+                    <li class="pricing-on__links"><a href="#">Typography</a></li>
+                    <li class="pricing-on__links"><a href="#">Buttons</a></li>
+                    <li class="pricing-on__links"><a href="#">Forms</a></li>
+                    <li class="pricing-on__links"><a href="#">Tabs and Accordions</a></li>
+                    <li class="pricing-on__links"><a href="#">Progress bars</a></li>
+                    <li class="pricing-on__links"><a href="#">Careers</a></li>
+                    <li class="pricing-on__links"><a href="#">FAQ</a></li>
+                    <li class="pricing-on__links"><a href="#">Testimonials</a></li>
+                    <li class="pricing-on__links"><a href="#">Our Solutions</a></li>
+                    <li class="pricing-on__links"><a href="#">Our Solutions 2</a></li>
+                    <li class="pricing-on__links"><a href="#">Grid system</a></li>
+                    <li class="pricing-on__links"><a href="#">Privacy policy</a></li>
+                    <li class="pricing-on__links"><a href="#">404 Page</a></li>
+                    <li class="pricing-on__links"><a href="#">Coming Soon</a></li>
+                    <li class="pricing-on__links"><a href="#">Search results</a></li>
+                    <li class="pricing-on__links"><a href="#">Tables</a></li>
+                    <li class="pricing-on__links"><a href="#">Our Team 2</a></li>
+                    <li class="pricing-on__links"><a href="#">Contact Us</a></li>
+                    <li class="pricing-on__links"><a href="#">Login</a></li>
+                    <li class="pricing-on__links"><a href="#">Register</a></li>
+                </ul>
+            </nav>
+        </ul>
+
+        <button class="btn btn__transparent btn-hoverPink">Sign In</button>
+    </div>
+
+    <!-- ===================== HEADER ===================== -->
+    <header class="header" id="header" >
+        <div class="header__caption">
+            <h1 class="h1 header__title" data-aos="fade-up-right"><span>Professional</span> Business Consulting</h1>
+            <p class="header__paragraph" data-aos="fade-down-left">
+                Businet provides reliable business planning, management, and advisory services backed by years of experience in the industry.
+            </p>
+            <div data-aos="fade-down-left" data-aos-delay="100">
+                <button class="btn btn__white btn-hoverBlue">Read More</button>
+                <button class="btn btn__blue btn-hoverPink">Contact Us</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="services">
+            <h2 class="h2 h2--blue mb-2" data-aos="fade-down-right">OUR SERVICES</h2>
+            <h3 class="h3" data-aos="fade-down-left">What We Do</h3>
+
+            <div class="box-container">
+                <div class="box" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+                    <div class="box__circle"></div>
+                    <i class="box__icon material-icons">dvr</i>
+                    <h4 class="h4">Market Analysis</h4>
+                    <h5 class="h5">We support your business with fact-based market research.</h5>
+                </div>
+
+                <div class="box" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="150">
+                    <div class="box__circle"></div>
+                    <i class="box__icon material-icons">multiline_chart</i>
+                    <h4 class="h4">Funds Management</h4>
+                    <h5 class="h5">Allowing you to successfully deal with your company’s funds.</h5>
+                </div>
+
+                <div class="box" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200">
+                    <div class="box__circle"></div>
+                    <i class="box__icon material-icons">airplay</i>
+                    <h4 class="h4">PR & Marketing</h4>
+                    <h5 class="h5">Helping clients expand awareness and manage their reputation.</h5>
+                </div>
+
+                <div class="box" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="250">
+                    <div class="box__circle"></div>
+                    <i class="box__icon material-icons">format_list_numbered</i>
+                    <h4 class="h4">Business Planning</h4>
+                    <h5 class="h5">Creating an efficient business plan designed to fit your company.</h5>
+                </div>
+
+                <div class="box" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="300">
+                    <div class="box__circle"></div>
+                    <i class="box__icon material-icons">search</i>
+                    <h4 class="h4">Audit</h4>
+                    <h5 class="h5">Deep and detailed investigation of your company’s activity.</h5>
+                </div>
+
+                <div class="box" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="350">
+                    <div class="box__circle"></div>
+                    <i class="box__icon material-icons">chat</i>
+                    <h4 class="h4">Consulting</h4>
+                    <h5 class="h5">Focusing on our clients’ most critical issues and opportunities</h5>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about bg-blue" id="about">
+        <div class="same-sections">
+            <div class="same-sections__pic-side animation-element" data-aos="fade-up-right">
+                <div class="about__img">
+                    <a href="#" class="about__play-a">
+                        <i class="material-icons about__play-icon">play_arrow</i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="same-sections__txt-side animation-element" data-aos="fade-down-left">
+                <h2 class="h2 h2--white mb-2" data-aos="fade-down-right">ABOUT BUSINET</h2>
+                <h3 class="h3 h3--white mb-2" data-aos="fade-up-left">A Few Words About Us</h3>
+                <p class="same-sections__text">
+                    Our consulting company is a leading firm of business managers and advisors with offices across the USA. We aim to provide you:
+                </p>
+                <ul class="same-sections__links">
+                    <li class="same-sections__link bullet-links--white">Quality research & analysis</li>
+                    <li class="same-sections__link bullet-links--white">Business advisory experience</li>
+                    <li class="same-sections__link bullet-links--white">Reliable company management</li>
+                </ul>
+
+                <button class="btn btn__white btn-hoverPink">Read more</button>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===================== WHY US ===================== -->
+    <section class="why-us bg-white">
+        <div class="same-sections">
+
+            <div class="same-sections__txt-side animation-element" data-aos="fade-down-left">
+                <h2 class="h2 h2--blue mb-2" data-aos="fade-down-right">WHY US</h2>
+                <h3 class="h3 mb-2" data-aos="fade-up-left">Reasons People Choose Businet</h3>
+                <p class="same-sections__text">
+                    We believe there are many good reasons for you to want to choose us for your business consulting purposes. Here are some of them:
+                </p>
+                <ul class="same-sections__links">
+                    <li class="same-sections__link bullet-link--blue">Qualified team</li>
+                    <li class="same-sections__link bullet-link--blue">15+ years of expertise</li>
+                    <li class="same-sections__link bullet-link--blue">Flexibility and dedication</li>
+                </ul>
+            </div>
+
+            <div class="same-sections__pic-side animation-element" data-aos="fade-up-right">
+                <img src="./img/home-01-610x432.png" alt="" class="why-us__img" />
+              
+            </div>
+            
+            
+        </div>
+    </section>
+
+
+    <!-- ===================== WHAT WE WORK ===================== -->
+    <section class="what-we-work">
+            <div class="container grid-container same-sections">
+                <div class="same-sections__txt-side animation-element">
+                    <h2 class="h2 h2--white mb-2" data-aos="fade-down-right">WHAT WE WORK ON</h2>
+                    <h3 class="h3 h3--white mb-2" data-aos="fade-up-left">Browse Our Latest <br/><span>Consulting Projects</span></h3>
+                    <p class="same-sections__text" data-aos="zoom-in-right">
+                        Our team has worked on a wide variety of consulting and management projects since our establishment. Take a look at some of them in our project gallery.
+                    </p>
+                    <button class="btn btn__white btn-hoverYellow" data-aos="zoom-in-right">Read more</button>
+                </div>                
+            </div>
+    </section>
+
+
+    <!-- ===================== TEAM ===================== -->
+    <section class="team bg-white" id="team">
+        <h2 class="h2 h2--blue mb-2" data-aos="fade-down-right">MEET OUR TEAM</h2>
+        <h3 class="h3 mb-5" data-aos="fade-up-left">Our Professional Team</h3>
+
+        <div class="team__grid-container" id="team-profiles">
+            <div class="box" data-aos="fade-up" data-aos-delay="100">
+                <figure class="box__img-container">
+                    <img src="img/team-1-369x315.jpg" alt="Michael"/>
+                </figure>
+                
+                <div class="box__names">
+                    <h4 class="h4">Michael Logan</h4>
+                    <h5 class="h5">Managing Director</h5>
+
+                    <div class="box__touch">
+                        <div class="box__flex">
+                            <div class="box__arrow"><div>&darr;</div></div>
+                            <p class="box__italic">Get In Touch</p>
+                        </div>
+                        <ul class="box__list">
+                            <li><a href="https://m.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ===== box 2 ===== -->
+            <div class="box" data-aos="fade-up" data-aos-delay="150">
+                <figure class="box__img-container">
+                    <img src="img/team-2-369x315.jpg" alt="Michael"/>
+                </figure>
+                
+                <div class="box__names">
+                    <h4 class="h4">Jane Williams</h4>
+                    <h5 class="h5">Executive Consultant</h5>
+
+                    <div class="box__touch">
+                        <div class="box__flex">
+                            <div class="box__arrow"><div>&darr;</div></div>
+                            <p class="box__italic">Get In Touch</p>
+                        </div>
+                        <ul class="box__list">
+                            <li><a href="https://m.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ==== BOX 3 ===== -->
+            <div class="box" data-aos="fade-up" data-aos-delay="200">
+                <figure class="box__img-container">
+                    <img src="img/team-3-369x315.jpg" alt="Michael"/>
+                </figure>
+                
+                <div class="box__names">
+                    <h4 class="h4">Gregory Smith</h4>
+                    <h5 class="h5">Safety Consultant</h5>
+
+                    <div class="box__touch">
+                        <div class="box__flex">
+                            <div class="box__arrow"><div>&darr;</div></div>
+                            <p class="box__italic">Get In Touch</p>
+                        </div>
+                        <ul class="box__list">
+                            <li><a href="https://m.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==== BOX 4 ==== -->
+            <div class="box" data-aos="fade-up" data-aos-delay="250">
+                <figure class="box__img-container">
+                    <img src="img/team-4-369x315.jpg" alt="Michael"/>
+                </figure>
+                
+                <div class="box__names">
+                    <h4 class="h4">Jennifer Bailey</h4>
+                    <h5 class="h5">Associate Consultant</h5>
+
+                    <div class="box__touch">
+                        <div class="box__flex">
+                            <div class="box__arrow"><div>&darr;</div></div>
+                            <p class="box__italic">Get In Touch</p>
+                        </div>
+                        <ul class="box__list">
+                            <li><a href="https://m.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://twitter.com/"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="faq">
+            <div class="faq__questions">
+                <h2 class="h2 h2--blue mb-2" data-aos="fade-down-right">POPULAR QUESTIONS</h2>
+                <h3 class="h3 mb-2" data-aos="fade-up-left">FAQ</h3>
+
+                <input type="checkbox" id="toggleFilter" class="faq__chb-btn"/>
+                <label for="toggleFilter" class="faq__mobile-list" data-aos="fade-right" data-aos-anchor-placement="top-bottom">
+                    <p>filter &nbsp;</p><i class="material-icons">expand_more</i>
+                </label>
+
+                <ul class="faq__links">
+                    <li class="faq__link active-link" data-aos="fade-right"><a href="#">General</a></li>
+                    <li class="faq__link" data-aos="fade-right"><a href="#">Our Solutions</a></li>
+                    <li class="faq__link" data-aos="fade-right"><a href="#">Our Experience</a></li>
+                    <li class="faq__link" data-aos="fade-right"><a href="#">Customer Service</a></li>
+                </ul>
+            </div>
+    
+            <div class="card-container" data-aos="fade-left">
+                <!-- CARD 1 -->
+                <div class="card active-card" >
+                    <input type="checkbox" id="body-1" checked class="card__toggle-body">
+                    <label for="body-1" class="card__label">
+                        <div class="card__title-wrapper">
+                            <p>What am I allowed to do with the templates?</p>
+                            <i class="material-icons">close</i>
+                            <i class="material-icons">expand_more</i>
+                        </div>
+                    </label>
+    
+                    <div class="card__body">
+                        <p>You may build a website using the template in any way you like. You may not resell or redistribute templates (like we do); claim intellectual or exclusive ownership to any of our products, modified or unmodified. All products are property of content providing companies and individuals. You are also not allowed to make more than one project using the same template (you have to purchase the same template once more in order to make another project with the same design).</p><br>
+    
+                        <p>If you want to use any of already bought templates for another project of yours, you have to purchase that template once more in order to use the same design for your company website.</p>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="card active-card">
+                    <input type="checkbox" id="body-2" class="card__toggle-body">
+                    <label for="body-2" class="card__label">
+                        <div class="card__title-wrapper">
+                            <p>Do you provide any scripts with your templates? </p>
+                            <i class="material-icons">close</i>
+                            <i class="material-icons">expand_more</i>
+                        </div>
+                    </label>
+    
+                    <div class="card__body">
+                        <p>Our templates do not include any additional scripts. Newsletter subscriptions, search fields, forums, image galleries (in HTML versions of Flash products) are active. Basic scripts can be easily added at www.zemez.io If you are not sure that the element you’re interested in is active =please contact our Support Chat for clarification.,</p>
+                    </div>
+                </div>
+
+
+                <!-- CARD 3 -->
+                <div class="card active-card">
+                    <input type="checkbox" id="body-3" class="card__toggle-body">
+                    <label for="body-3" class="card__label">
+                        <div class="card__title-wrapper">
+                            <p>What do I receive when I order a template from Zemez?</p>
+                            <i class="material-icons">close</i>
+                            <i class="material-icons">expand_more</i>
+                        </div>
+                    </label>
+    
+                    <div class="card__body">
+                        <p>After you complete the payment via our secure form you will receive the instructions for downloading the product. The source files in the download package can vary based on the type of the product you have purchased.</p>
+                    </div>
+                </div>
+
+
+                <!-- CARD 4 -->
+                <div class="card active-card">
+                    <input type="checkbox" id="body-4" class="card__toggle-body">
+                    <label for="body-4" class="card__label">
+                        <div class="card__title-wrapper">
+                            <p>In what formats are your templates available?</p>
+                            <i class="material-icons">close</i>
+                            <i class="material-icons">expand_more</i>
+                        </div>
+                    </label>
+    
+                    <div class="card__body">
+                        <p>Website templates are available in Photoshop and HTML formats. Fonts are included with the Photoshop file. In most templates, HTML is compatible with Adobe® Dreamweaver® and Microsoft® FrontPage®.</p>
+                    </div>
+                </div>
+
+            </div><!-- END OF CARD CONTAINER -->
+    </section>
+
+
+    <!-- ===================== PARTNERS ===================== -->
+    <section class="partners bg-blue">
+        <h2 class="h2 h2--white mb-2" data-aos="fade-down-right">WHO WE WORK WITH</h2>
+        <h3 class="h3 h3--white mb-5" data-aos="fade-up-left">Our Partners</h3>
+
+        <div class="partners__imgs animation-element" data-aos="fade-up-right">
+            <img src="./img/partners-1-88x77.png" alt="infinity-company-company-logo" class="partners__img" />
+            <img src="./img/partners-2-73x78.png" alt="companyname-company-logo" class="partners__img" />
+            <img src="./img/partners-3-96x62.png" alt="wood-floors-company-logo" class="partners__img" />
+            <img src="./img/partners-4-78x80.png" alt="hexagon-company-logo" class="partners__img" />
+            <img src="./img/partners-5-87x76.png" alt="my-parquet-company-logo" class="partners__img" />
+        </div>
+    </section>
+
+
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer bg-white">
+        <div class="grid-container">
+            <div class="box" data-aos="fade-down" data-aos-anchor-placement="top-bottom">
+                <a href="index.html"><img src="./img/logo-default-148x34.png" alt="Logo" class="a-logo"/></a>
+                <p class="p-logo">
+                    Since 1999, we have been helping American businesses thrive.
+                </p><br/>
+                <button class="btn btn__transparent-grey btn-hoverPink">Sign In</button>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+                <h4 class="h4">Who We Are</h4>
+                <ul>
+                    <li class="box__link"><a href="#">About Us</a></li>
+                    <li class="box__link"><a href="#">Careers</a></li>
+                    <li class="box__link"><a href="#">Our Team</a></li>
+                </ul>
+            </div>
+
+            <div class="box" data-aos="fade-down" data-aos-anchor-placement="top-bottom" data-aos-delay="150">
+                <h4 class="h4">Quck Links</h4>
+                <ul class="box__links">
+                    <li class="box__link"><a href="#">Sign Up</a></li>
+                    <li class="box__link"><a href="#">News</a></li>
+                    <li class="box__link"><a href="#">Privacy policy</a></li>
+                    <li class="box__link"><a href="#">Pricing</a></li>
+                    <li class="box__link"><a href="#">Features</a></li>
+                    <li class="box__link"><a href="#">FAQ</a></li>
+                    <li class="box__link"><a href="#">Contacts</a></li>
+                </ul>
+            </div>
+
+            <div class="box" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="200" id="contact">
+                <h4 class="h4">Get in Touch</h4>
+                <p>info@demolink.org</p>
+                <p>+1-853-234-65</p> <br>
+                <ul class="box__links-git">
+                    <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter tw"></i></a></li>
+                    <li><a href="https://m.facebook.com" target="_blank"><i class="fab fa-facebook-f fb"></i></a></li>
+                    <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram ig"></i></a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__copyright" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+            <p>Coding by <a href="https://www.linkedin.com/marta-bireš" target="_blank">Marta Bireš</a>.<br>
+                Design by Zemez: <a href="https://www.templatemonsterpreview.com/demo/49529.html" target="_blank">original</a>
+            </p>
+            <p>&copy; 2019. Businet. Privacy Policy.</p>
+        </div>
+    </footer>
+
+    <a href="#body" class="scrollToTop"><i class="material-icons">expand_less</i></a>
+
+
+    <!-- <span class="device-name"></span> -->
+
+    <!-- JAVASCRITP -->
+    <script src="https://kit.fontawesome.com/4177917276.js"></script>
+    <script src="js/main.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>

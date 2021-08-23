@@ -1,0 +1,65 @@
+// MEDIA QUERY MANAGER
+/* 
+0 - 600px:      Phone
+900 - 1200px:    Table portrait
+[1200 - 1800] is where our normal styles apply
+1800px +:       Big desktop
+*/
+
+// I nacin
+// @mixin respond-phone { // jedan nacin
+//     @media (max-width: 600px) { @content };
+// }
+
+// II nacin
+/*
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+RED PROMENA: Base + typography > general layout + grid > page layout > components
+
+1em = 16px, a za media-query je najbolje koristiti em. $breakpoint/16 = koliko em-a
+*/
+
+@mixin device($breakpoint) {
+	@if $breakpoint == phone {
+		@media only screen and (max-width: 37.5em) {
+			@content;
+		} // 600px/16
+	}
+
+	@if $breakpoint == tab-port {
+		@media only screen and (max-width: 56.25em) {
+			@content;
+		} // 900px/16
+	}
+
+	@if $breakpoint == tab-land {
+		@media only screen and (max-width: 75em) {
+			@content;
+		} // 1200px/16
+	}
+
+	@if $breakpoint == huge-desktop {
+		@media only screen and (max-width: 112.5em) {
+			@content;
+		} // 1800px/16
+	}
+}
+
+// i posle ide:
+//  @include device(phone) {
+//     ...
+// }
+
+// animation-name: playBtn;
+// animation-duration: .5s;
+// animation-timing-function: ease-in-out; // linear
+// animation-direction: alternate; // normal | reverse | alternate | alternate-reverse
+// animation-fill-mode: none; // none | forwards | backwards | both. Stil elementa kada animacija nije pokrenuta, iliti pre nego sto pocne ili nakon sto se zavrsi ili oboje
+// animation-play-state: running; // running | paused
+// animation-iteration-count: infinite; // broj |infinite | initial | inherit - koliko x se neka animacija vrsi, infinite je for-ever fazon
+// animation-delay: 0s; // odlaganje animacije u sekundama. Ovo je recimo dobro za ono kad se ucita stranica pa na skroll da se dodje do nekog elemant pa se on onako pojavi

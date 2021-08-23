@@ -1,0 +1,21 @@
+.partners {
+	text-align: center;
+
+	&__imgs {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 6rem;
+	}
+
+	&__img {
+		opacity: 0.6;
+		margin: 2vw 5vw;
+		transition: opacity 0.2s ease-in-out;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}

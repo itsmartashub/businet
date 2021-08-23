@@ -1,0 +1,265 @@
+.faq {
+	font-family: $font-fam;
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	grid-gap: 10rem;
+
+	@include device(tab-port) {
+		grid-template-columns: 2fr 3fr;
+		grid-gap: 2.5rem;
+	}
+
+	@include device(phone) {
+		grid-template-columns: 1fr;
+		grid-gap: 2.5rem;
+	}
+
+	// .grid-container {
+	// 	display: grid;
+	// 	grid-template-columns: 1fr 2fr;
+	// 	grid-gap: 10rem;
+	// 	// grid-template-rows: 1fr;
+
+	// 	@include device(tab-port) {
+	// 		grid-template-columns: 2fr 3fr;
+	// 		grid-gap: 2.5rem;
+	// 	}
+
+	// 	@include device(phone) {
+	// 		grid-template-columns: 1fr;
+	// 		grid-gap: 2.5rem;
+	// 	}
+	// }
+
+	&__questions {
+		position: relative;
+
+		@include device(phone) {
+			text-align: center;
+		}
+	}
+
+	&__chb-btn {
+		display: none;
+
+		&:checked {
+			~ .faq__links {
+				opacity: 1;
+				pointer-events: all;
+				transform: translateY(0);
+			}
+
+			~ .faq__mobile-list {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+
+				i {
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+
+	&__mobile-list {
+		display: none;
+		color: $black;
+		cursor: pointer;
+		margin-top: 3rem;
+
+		i {
+			transform: rotate(0deg);
+			transition: transform 0.3s ease-in-out;
+		}
+
+		@include device(phone) {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 1rem;
+			background: white;
+			border-radius: 2px;
+			box-shadow: $box-shadow-box;
+			border-radius: 0.8rem;
+			z-index: 6;
+		}
+	}
+
+	&__links {
+		@include device(phone) {
+			background: rgba($white, 0.98);
+			box-shadow: $box-shadow-box;
+			position: absolute;
+			width: 100%;
+			z-index: 5;
+			opacity: 0;
+			pointer-events: none;
+			transform: translateY(-10%);
+			transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+
+			.faq__link {
+				font-size: 1.3rem;
+				padding: 0.5rem;
+				border: none;
+				color: $black;
+			}
+
+			.active-link a {
+				color: $blue !important;
+				border: none !important;
+			}
+		}
+
+		.active-link {
+			a {
+				border-bottom: 4px inset $blue;
+				color: $black;
+			}
+		}
+	}
+
+	&__link {
+		// background: white;
+		padding: 1.5rem 2rem 1.5rem 0;
+		border-bottom: 0.2px solid rgba($grey-dark-1, 0.2);
+		font-size: 2.1rem;
+
+		&:not(:first-child) {
+			margin-top: 1rem;
+		}
+
+		@include device(tab-port) {
+			padding: 1rem 1.5rem 1rem 0;
+			font-size: 1.8rem;
+		}
+
+		a {
+			color: inherit;
+			padding-bottom: 1.4rem;
+			transition: 0.4s ease-in-out;
+
+			@include device(tab-port) {
+				padding-bottom: 0.9rem;
+			}
+		}
+
+		&:hover {
+			cursor: pointer;
+			a {
+				color: $blue;
+			}
+		}
+	}
+
+	.card-container {
+		@include device(phone) {
+			margin-top: 3rem;
+		}
+	}
+
+	.card {
+		border: 1px solid rgba($grey-dark-1, 0.2);
+		border-radius: 0.8rem;
+		overflow: hidden;
+		display: grid;
+
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+
+		&__title-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 2.3rem;
+			color: $black;
+			cursor: pointer;
+			padding: 4rem;
+			border-radius: 0.8rem;
+
+			@include device(tab-port) {
+				font-size: 1.6rem;
+				padding: 2rem;
+			}
+
+			p {
+				margin-right: 1rem;
+				flex: 1;
+			}
+
+			i {
+				align-items: center;
+				justify-content: center;
+				transition: 0.3s ease-in-out;
+			}
+
+			i:nth-of-type(1) {
+				color: $grey-dark-1;
+				display: none;
+				position: relative;
+
+				&::before {
+					--close-size: 2rem;
+					content: "";
+					position: absolute;
+					width: var(--close-size);
+					height: var(--close-size);
+					border-radius: 100%;
+					z-index: -1;
+				}
+			}
+
+			i:nth-of-type(2) {
+				display: flex;
+				color: $grey-dark-2;
+				transform: scaleX(1.3);
+
+				&:hover {
+					color: $blue;
+				}
+			}
+		}
+
+		&__body {
+			background: $white;
+			color: $black;
+			font-size: 1.5rem;
+			padding: 0rem 4rem 4rem 4rem;
+			line-height: 1.6;
+			letter-spacing: 0.07rem;
+			display: none;
+
+			@include device(tab-port) {
+				font-size: 1.3rem;
+				padding: 0 2rem 2rem 2rem;
+			}
+		}
+
+		&__toggle-body {
+			display: none;
+		}
+
+		&__toggle-body:checked ~ .card__body {
+			display: block;
+			// height: max-content;
+		}
+
+		&__toggle-body:checked ~ .card__label .card__title-wrapper {
+			background: $white !important;
+			color: $blue;
+
+			i:nth-of-type(1) {
+				display: flex !important;
+				color: $white;
+				z-index: 1;
+				font-size: 1.5rem;
+
+				&::before {
+					background: $blue;
+				}
+			}
+			i:nth-of-type(2) {
+				display: none !important;
+			}
+		}
+	}
+}

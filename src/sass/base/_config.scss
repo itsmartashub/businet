@@ -1,0 +1,64 @@
+// COLORS
+// $pink: #ff6f80; // btn hover
+$pink: #f7374e; // btn hover
+$blue: #3375ec; // active link, btn
+$yellow: #ffea5c;
+$black: #262f3c;
+$white: #ffffff;
+$grey-dark-1: #8491a5; // text
+$grey-dark-2: #9b9b9b; // text doel u teamers ispod imena
+$grey-light-1: #e5ebf7; // h2 bg
+$grey-light-2: #f9f8f8;
+$tw: #08a0e9;
+$fb: #1877f2;
+
+$linear-gradient: linear-gradient(30deg, #0152e9, #96b8f6);
+$box-shadow-btn: 1px 6px 8px 0 rgba(75, 81, 91, 0.11);
+$box-shadow-box: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+$box-shadow-box2: 0 0 24px 0 rgba(75, 81, 91, 0.12);
+// $box-shadow-box2: rgba(149, 157, 165, 0.1) 0px 8px 24px;
+$grey-border: 1px solid #ebebeb;
+
+// FONTS
+$font-fam: Muli, sans-serif;
+
+// MARGINE
+.mb-2 {
+	margin-bottom: 2rem;
+
+	@include device(tab-port) {
+		margin-bottom: 1rem;
+	}
+}
+
+.bg-white {
+	background: $white;
+}
+
+.bg-blue {
+	background: $blue;
+}
+
+// MARGINS
+// $spaceamounts: (1, 2, 3, 4, 5, 8);
+// @each $space in $spaceamounts {
+//     // Margin-bottom
+//     .mb-#{$space} {
+//       margin-bottom: #{$space}rem;
+//     }
+// }
+
+// // Set text color based on background
+// @function set-text-color($color) {
+//   @if (lightness($color) > 60) {
+//     @return #333;
+//   } @else {
+//     @return $white;
+//   }
+// }
+
+// // Set background & text color
+// @mixin set-background($color) {
+//   background-color: $color;
+//   color: set-text-color($color);
+// }

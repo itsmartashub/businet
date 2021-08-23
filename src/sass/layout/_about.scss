@@ -1,0 +1,111 @@
+.about {
+	color: $white;
+
+	.same-sections {
+		@include device(tab-land) {
+			grid-gap: 5rem;
+			align-items: center;
+		}
+
+		&__pic-side {
+			border-radius: 0.8rem;
+			box-shadow: $box-shadow-box;
+			overflow: hidden;
+			position: relative;
+
+			@include device(tab-land) {
+				width: 100%;
+				height: 80%;
+			}
+
+			@include device(tab-port) {
+				grid-columns: 1/2;
+				grid-row: 2/3;
+				// width: 70vw;
+				height: 55vmax;
+				justify-self: center;
+			}
+
+			@include device(phone) {
+				height: 55vmin;
+				width: 100%;
+			}
+		}
+	}
+
+	&__img {
+		height: 100%;
+		background-image: linear-gradient(rgba(#000, 0.4), rgba(#000, 0.4)),
+			url("../img/web-app-1-650x500.jpg");
+		background-size: cover;
+		background-position: center center;
+		opacity: 0.8;
+		transform: scale(1.1);
+		overflow: hidden;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.5s ease-in-out;
+
+		@include device(phone) {
+			width: 80vw;
+		}
+
+		&:hover {
+			transform: scale(1);
+		}
+	}
+
+	&__play-a {
+		position: relative;
+		border-radius: 1rem;
+
+		&:hover .about__play-icon::before {
+			-webkit-animation-name: playBtn;
+			-webkit-animation-duration: 0.5s;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-direction: alternate;
+			-webkit-animation-fill-mode: none;
+			-webkit-animation-play-state: running;
+			-webkit-animation-iteration-count: infinite;
+			-webkit-animation-delay: 0s;
+
+			-moz-animation-name: playBtn;
+			-moz-animation-duration: 0.5s;
+			-moz-animation-timing-function: ease-in-out;
+			-moz-animation-direction: alternate;
+			-moz-animation-fill-mode: none;
+			-moz-animation-play-state: running;
+			-moz-animation-iteration-count: infinite;
+			-moz-animation-delay: 0s;
+
+			animation-name: playBtn;
+			animation-duration: 0.5s;
+			animation-timing-function: ease-in-out; // linear
+			animation-direction: alternate; // normal | reverse | alternate | alternate-reverse
+			animation-fill-mode: none; // none | forwards | backwards | both. Stil elementa kada animacija nije pokrenuta, iliti pre nego sto pocne ili nakon sto se zavrsi ili oboje
+			animation-play-state: running; // running | paused
+			animation-iteration-count: infinite; // broj |infinite | initial | inherit - koliko x se neka animacija vrsi, infinite je for-ever fazon
+			animation-delay: 0s; // odlaganje animacije u sekundama. Ovo je recimo dobro za ono kad se ucita stranica pa na skroll da se dodje do nekog elemant pa se on onako pojavi
+
+			// animation: playBtn 1s linear forwards;
+		}
+	}
+
+	&__play-icon {
+		color: $white;
+		padding: 2.2rem;
+		border: 1px solid rgba($white, 0.4);
+
+		&::before {
+			content: "";
+			position: absolute;
+			width: 0;
+			height: 0;
+			top: 0;
+			left: 0;
+			background: transparent;
+			border: 2px solid transparent;
+		}
+	}
+}

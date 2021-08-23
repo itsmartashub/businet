@@ -1,0 +1,72 @@
+@keyframes pulsingCircle {
+	0% {
+		-webkit-transform: translate(-50%, 50%) scale(1);
+		-moz-transform: translate(-50%, 50%) scale(1);
+	}
+
+	100% {
+		-webkit-transform: translate(-35%, 52%) scale(0.92);
+		-moz-transform: translate(-35%, 52%) scale(0.92);
+	}
+}
+
+@keyframes playBtn {
+	0% {
+		width: 0;
+		height: 0;
+		border-top-color: $white;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+
+	25% {
+		width: 100%;
+		height: 0;
+		border-top-color: $white;
+		border-right-color: transparent;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+		border-top-radius: 1rem;
+	}
+
+	50% {
+		width: 100%;
+		height: 100%;
+		border-top-color: $white;
+		border-right-color: $white;
+		border-bottom-color: transparent;
+		border-left-color: transparent;
+	}
+
+	75% {
+		width: 100%;
+		height: 100%;
+		border-top-color: $white;
+		border-right-color: $white;
+		border-bottom-color: $white;
+		border-left-color: transparent;
+	}
+
+	100% {
+		width: 100%;
+		height: 100%;
+		border-top-color: $white;
+		border-right-color: $white;
+		border-bottom-color: $white;
+		border-left-color: $white;
+	}
+}
+
+@keyframes hoverBtn {
+	0% {
+		opacity: 1;
+		transform: translate(-100%, 100%);
+	}
+
+	100% {
+		transform: translate(100%, -100%);
+		opacity: 1;
+		z-index: 1000;
+	}
+}

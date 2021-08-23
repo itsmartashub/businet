@@ -1,0 +1,31 @@
+.what-we-work {
+	background: url("../img/bg-image-4.jpg") no-repeat;
+	background-size: cover;
+	background-position-x: 48%;
+	color: $white;
+
+	@include device(tab-port) {
+		background-position-x: 80%;
+	}
+
+	@include device(phone) {
+		background-position-x: 70%;
+	}
+
+	.same-sections {
+		@include device(tab-port) {
+			grid-gap: 0rem;
+			justify-items: start;
+		}
+
+		&__txt-side {
+			grid-column: 2/-1;
+
+			.h3 {
+				span {
+					color: $blue;
+				}
+			}
+		}
+	}
+}

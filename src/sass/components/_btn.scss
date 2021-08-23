@@ -1,0 +1,127 @@
+.btn {
+	position: relative;
+	&,
+	&:link,
+	&:visited {
+		padding: 2rem 4.5rem;
+		border-radius: 5rem;
+		border: none;
+		font-size: 1.6rem;
+		letter-spacing: 0.025em;
+		cursor: pointer;
+		transition: 0.3s ease-in-out;
+	}
+
+	&:active,
+	&:focus {
+		outline: none;
+		transform: translateY(-1px); /* kada se klikne  */
+		box-shadow: 0 0.5rem 1rem rgba(#000, 0.2); /* x y blur color */
+	}
+
+	&__transparent {
+		background-color: transparent;
+		border: 1px solid rgba($white, 0.5);
+		color: $white;
+		font-size: 1.4rem;
+		padding: 1rem 4rem;
+
+		@include device(tab-land) {
+			// width < 900 ?
+			font-size: 1.2rem;
+			padding: 1rem 2rem;
+			word-wrap: break-word;
+		}
+	}
+	&__transparent-grey {
+		background-color: transparent;
+		border: $grey-border;
+		color: currentColor;
+		font-size: 1.2rem;
+		padding: 1rem 2rem;
+	}
+
+	&__white {
+		background-color: $white;
+		color: $black;
+		border: 1px solid $white;
+		box-shadow: $box-shadow-btn;
+		transition: 0.3s !important;
+	}
+
+	&__blue {
+		background-color: $blue;
+		color: $white;
+		border: 1px solid $blue;
+		box-shadow: $box-shadow-btn;
+		margin-left: 3rem;
+		transition: 0.3s !important;
+
+		@include device(phone) {
+			margin: 2rem 0 0 0;
+		}
+	}
+
+	&-hoverPink:hover {
+		background-color: $pink;
+		border: 1px solid $pink;
+		color: $white;
+
+		&::after {
+			background: $pink;
+		}
+	}
+
+	&-hoverBlue:hover {
+		background-color: $blue;
+		border: 1px solid $blue;
+		color: $white;
+
+		&::after {
+			background: $blue;
+		}
+	}
+
+	&-hoverYellow:hover {
+		background-color: $yellow;
+		border: 1px solid $yellow;
+		color: $black;
+
+		&::after {
+			background: $yellow;
+		}
+	}
+
+	overflow: hidden;
+
+	&::after {
+		content: "";
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: 0;
+		border-radius: 5rem;
+	}
+
+	&:hover {
+		//! transform: translate(0, 0); //wtf, mora da ima DEFINISAN transform da bi ovaj after transform radio :OOO
+		&::after {
+			-moz-animation-name: hoverBtn;
+			-moz-animation-duration: 0.8s;
+			-moz-animation-timing-function: ease-in-out;
+			-moz-animation-fill-mode: backwards;
+
+			-webkit-animation-name: hoverBtn;
+			-webkit-animation-duration: 0.8s;
+			-webkit-animation-timing-function: ease-in-out;
+			-webkit-animation-fill-mode: backwards;
+
+			animation-name: hoverBtn;
+			animation-duration: 0.8s;
+			animation-fill-mode: backwards;
+		}
+	}
+}

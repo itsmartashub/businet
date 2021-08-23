@@ -1,0 +1,80 @@
+.same-sections {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 8vw;
+	justify-content: space-between;
+
+	@include device(tab-port) {
+		grid-template-columns: 1fr;
+		justify-content: center;
+		justify-items: start;
+	}
+
+	@include device(phone) {
+		// grid-template-columns: 1fr;
+		// justify-content: center;
+		justify-items: center;
+		// grid-gap: 0rem;
+	}
+
+	&__txt-side {
+		line-height: 1.6;
+
+		.h3 {
+			line-height: 1.2;
+		}
+	}
+
+	&__text {
+		margin-bottom: 3rem;
+
+		@include device(tab-port) {
+			// font-size: 1.3rem;
+			width: 80%;
+		}
+
+		@include device(phone) {
+			font-size: 1.45rem;
+			width: 100%;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__links {
+		margin-bottom: 3rem;
+
+		@include device(phone) {
+			font-size: 1.45rem;
+			margin-bottom: 2rem;
+		}
+	}
+
+	&__link {
+		display: flex;
+		align-items: center;
+		margin-left: 2.5rem;
+
+		&::before {
+			content: "";
+			position: absolute;
+			display: block;
+			width: 0.7rem;
+			height: 0.7rem;
+			border-radius: 100%;
+			background-color: $white;
+			transform: translateX(-2.5rem);
+		}
+		&::before {
+			background-color: $white;
+		}
+	}
+
+	button {
+		@include device(tab-land) {
+			// width < 900 ?
+			font-size: 1.3rem;
+			padding: 1.5rem 3rem;
+			margin-top: 1.5rem;
+		}
+	}
+}

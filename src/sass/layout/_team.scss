@@ -1,0 +1,108 @@
+.team {
+	text-align: center;
+
+	&__grid-container {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr));
+		justify-items: center;
+		justify-content: center;
+		grid-gap: 5rem 3rem;
+		margin-top: 8rem;
+
+		.box {
+			box-shadow: $box-shadow-box;
+			overflow: hidden;
+			border-radius: 0.6rem;
+
+			&__img-container {
+				height: auto;
+				display: flex; // npm al kad ovo dodah nestalo mi kao neki razmak izmedju slike i ovoga sa imenima
+
+				img {
+					width: 100%;
+					height: 22rem;
+					object-fit: cover;
+				}
+			}
+
+			&__names {
+				position: relative;
+				z-index: 1;
+				padding: 3rem 4rem;
+
+				h4 {
+					font-size: 2.2rem;
+					margin-bottom: 0.5rem;
+				}
+				h5 {
+					font-size: 1.6rem;
+					font-weight: 300;
+				}
+			}
+
+			&__touch {
+				color: $white;
+				background: linear-gradient(135deg, lighten($blue, 15%), $blue);
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				transform: translate(-85%, 68%);
+				cursor: pointer;
+				transition: all 0.5s ease-in-out;
+			}
+
+			&__flex {
+				display: flex;
+				flex-direction: column;
+				align-content: center;
+			}
+
+			&__arrow {
+				position: absolute;
+				top: 0;
+				right: 0;
+				padding: 0.8rem 1.7rem;
+				justify-self: end;
+
+				div {
+					transform: rotate(-135deg);
+					transition: all 0.3s ease-in-out;
+				}
+			}
+
+			&__italic {
+				font-size: 1.8rem;
+				margin: 2.8rem 0 1.5rem;
+			}
+
+			&__list {
+				li {
+					display: inline-flex;
+					a {
+						color: $white;
+						transition: 0.3s ease-in-out;
+					}
+					i {
+						padding: 0.5rem;
+					}
+
+					&:hover {
+						a {
+							transform: translateY(-10%);
+						}
+					}
+				}
+			}
+		}
+
+		.box:hover .box__names .box__touch {
+			transform: translate(0rem, 0rem);
+
+			.box__arrow div {
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
